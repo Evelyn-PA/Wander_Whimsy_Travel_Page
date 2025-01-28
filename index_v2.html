@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADVENTURE</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1 class="logo">Wander Whimsy</h1>
+      <ul class="nav-links">
+        <li class="active"><a href="#"></a>Home</li>
+        <li><a href="#"></a>Destination</li>
+        <li><a href="#"></a>Travel Tips</li>
+        <li><a href="#"></a>About</li>
+      </ul>
+      <div class="mobile-nav">
+        <img src="./menu-btn.png" alt="" class="menu-btn" />
+        <h1 class="close-btn">X</h1>
+      </div>
+    </nav>
+
+    <header>
+      <div class="header-content">
+        <h2>Explore The World With Wander Whimsy</h2>
+        <p>
+          Join us on a journey to discover hidden gems, exciting adventures, and
+          unforgettable experiences around the globe. Let Whander Whimsy be your
+          Guide to a world full of wonder and wanderlust.
+        </p>
+
+        <a href="#" class="ctn">Start Exploring</a>
+      </div>
+    </header>
+
+    <script>
+      const mobileNav = document.querySelector(".mobile-nav");
+      const menuBtn = document.querySelector(".menu-btn");
+      const navlinks = document.querySelector(".nav-links");
+      const closeBtn = document.querySelector(".close-btn");
+
+      mobileNav.addEventListener("click", (e) => {
+        navlinks.classList.toggle("mobile-menu");
+        if (e.target === menuBtn) {
+          menuBtn.replaceWith(closeBtn);
+          closeBtn.style.display = "block";
+        }
+        if (e.target === closeBtn) {
+          closeBtn.replaceWith(menuBtn);
+        }
+      });
+    </script>
+  </body>
+</html>
